@@ -13,4 +13,4 @@ WORKDIR ${WORKROOT}
 
 EXPOSE 80
 
-CMD if [ -e ${WORKROOT}/index.html ]; then echo "Page exist, ready to go."; else cp -f "${SRCROOT}/index.html" "${WORKROOT}/index.html"; fi && python -m http.server 80
+CMD if [ -e ${WORKROOT}/index.html ]; then echo "Page exist, ready to go."; else cp -f "${SRCROOT}/index.html" "${WORKROOT}/index.html"; fi && if [ -e ${WORKROOT}/README.md ]; then echo "README.md found."; else echo "Welcome to the markdown-viewer" > "${WORKROOT}/README.md"; fi && python -m http.server 80

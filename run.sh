@@ -12,8 +12,8 @@ if [ -z ${location} ]; then
   exit -1
 fi
 if [ -z ${name} ]; then
-  echo "No given name, use location to named this container."
-  name=${location}
+  echo "No given name, use foldername to named this container."
+  name="${location##*/}"
 fi
 
 echo "Running at port ${port}."
