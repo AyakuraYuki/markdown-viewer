@@ -6,7 +6,7 @@ ENV WORKROOT="/docroot"
 
 RUN mkdir -p ${SRCROOT}
 RUN apk --no-cache add curl
-RUN curl -G "http://oss.ayakurayuki.cc/markdown_viewer/index.txt" -o ${SRCROOT}/index.html
+RUN curl -GL "https://github.com/AyakuraYuki/markdown-viewer/releases/download/1.0.0/index.txt" -o ${SRCROOT}/index.html
 
 VOLUME ${WORKROOT}
 WORKDIR ${WORKROOT}
