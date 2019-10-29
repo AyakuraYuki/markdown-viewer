@@ -39,3 +39,25 @@ for example:
 ```bash
 docker run --detach -p 13333:80 -v /path/to/doc_folder:/docroot markdown_viewer
 ```
+
+## for anyone who wonders how to stop the opening server
+
+1. find out the container id
+
+the following command will show you all running container
+
+```bash
+docker ps -a
+```
+
+find a row with `markdown_viewer` image, then copy its container ID
+
+2. stop this container
+
+for example, here we got a container ID `afd72988f88a`
+
+use the following command to stop this container
+
+```bash
+docker container stop afd72988f88a
+```
