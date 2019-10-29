@@ -20,5 +20,4 @@ echo "Running at port ${port}."
 echo "Using resource ${location}."
 
 docker run --detach -p ${port}:80 -v "${location}":/docroot --name "${name}" markdown_viewer
-
 exit 0
