@@ -1,4 +1,4 @@
-FROM python:3.7-alpine
+FROM python:3.12-alpine
 LABEL maintainer="Ayakura Yuki <AyakuraYuki@users.noreply.github.com>"
 
 ENV SRCROOT="/usr/src/markdown_viewer"
